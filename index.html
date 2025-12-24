@@ -275,7 +275,18 @@ function toggleMenu(){
   menu.style.display =
     (menu.style.display==="block") ? "none" : "block";
 }
-</script>
+<script>
+function askWinnerAI(){
+  var q=document.getElementById("aiQuestion").value;
+  if(q.trim()===""){
+    alert("Pehle apna question likho");
+    return;
+  }
 
-</body>
-</html>
+  var url =
+  "https://www.google.com/search?q=ChatGPT+AI+" +
+  encodeURIComponent(q);
+
+  window.open(url,"_blank");
+}
+</script>
